@@ -1,0 +1,11 @@
+<h1><%=@figure.name%></h1>
+<%titles = @figure.titles.map {|title| title.name}%>
+<%landmarks = @figure.landmarks%>
+<em><%=titles%></em> <br>
+<br>
+Associated Landmarks:
+<%landmarks.each do |landmark|%>
+    <li><%=landmark.name%>: <em><%=landmark.year_completed%></em></li>
+<%end%>
+
+

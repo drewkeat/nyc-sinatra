@@ -1,0 +1,19 @@
+<h2>All Historical Figures</h2>
+<ul>
+    <%@figures.each do |figure|%>
+    <li><b><%=figure.name%></b></li>
+    <ul>
+        <li>Associated Landmarks
+            <ul>
+                <%landmarks = figure.landmarks%>
+                <%landmarks.each do |landmark|%>
+                    <li><%=landmark.year_completed%>: <%=landmark.name%></li>
+                <%end%>
+            </ul>
+        </li>
+    </ul>
+    <%end%>
+</ul>
+
+<a class="button" href="/figures">Figures</a>
+<a class="button" href="/">Home</a>
